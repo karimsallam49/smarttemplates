@@ -1,0 +1,169 @@
+.firstsection{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.firstsectontext{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 1rem;
+    background-color: rgb(80, 76, 76);
+    color: white;
+    border-radius: 20px;
+    gap: 10px;
+    h1{
+
+        color: rgb(255, 166, 0);
+        font-size: 30px;
+    }
+    span{
+        font-size: 20px;
+    }
+
+}
+.firstsectonimg{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: imganimation 4s linear infinite;
+    img{
+        width: 100%;
+    }
+    
+}
+
+
+
+@keyframes imganimation {
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+
+
+/* second section */
+
+.secondsection{
+
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cart{
+
+    width: 500px;
+    height: 300px;
+    padding: .5rem;
+    border-radius: 30px;
+    color: black;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+}
+.cart:hover{
+
+
+   .text{
+
+    transform: translateX(20px);
+}
+.cartimg{
+    img{
+        transform: scale(1);
+
+    }
+}
+.overlay{
+
+        background:rgba(17, 15, 15, 0.6);
+
+}
+}
+
+.overlay{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+
+.title{
+
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    font-size: 25px;
+    z-index: 100;
+
+}
+.text{
+    position: absolute;
+    width: 300px;
+    margin-top: 60px;
+    border-right: solid 4px rgb(255, 123, 0);
+    border-radius: 3px;
+    padding: .5rem;
+    color: aliceblue;
+    text-align: right;
+    transition-duration: .4s;
+    z-index: 100;
+}
+
+.cartimg{
+
+    z-index: -1000;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        transition-duration: .3s;
+        transform: scale(1.1);
+
+}
+
+}
+
+/* end of second section */
+
+.thirdsectioncontainer{
+
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+}

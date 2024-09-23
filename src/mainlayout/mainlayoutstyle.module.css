@@ -1,0 +1,12 @@
+.container{
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper{
+
+    padding: 1rem 0;
+    margin-top: 3rem;
+}

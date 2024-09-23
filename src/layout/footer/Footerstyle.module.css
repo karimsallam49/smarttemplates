@@ -1,0 +1,19 @@
+.footer{
+
+    background-color: rgb(63, 59, 59);
+    width:100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: aliceblue;
+    margin-top: auto;
+    margin-right: 60px;
+    *{
+
+        margin-bottom: 10px;
+    }
+
+}
+

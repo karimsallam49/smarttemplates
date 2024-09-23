@@ -1,0 +1,86 @@
+.firstsection{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.firstsectontext{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 1rem;
+    color: white;
+    border-radius: 20px;
+    gap: 10px;
+    h1{
+
+        color: rgb(255, 166, 0);
+        font-size: 30px;
+    }
+    span{
+        font-size: 20px;
+    }
+
+}
+.firstsectonimg{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: imganimation 4s linear infinite;
+    img{
+        width: 100%;
+    }
+    
+}
+
+
+
+@keyframes imganimation {
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+.columcontainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:start ;
+}
+.contacttext{
+
+    text-align: right;
+    width: 120%;
+    line-height: 10px;
+}
+.inbutstyle{
+
+    background-color: rgb(255, 187, 0) !important;
+    margin: 1rem 0;
+    color: gray;
+    text-align: right;
+    border: solid 1px gray;
+    width: 120%;
+}
+.messagestyle{
+
+    background-color: rgb(255, 187, 0) !important;
+    text-align: right;
+
+
+}
