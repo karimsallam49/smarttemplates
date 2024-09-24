@@ -12,8 +12,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { resete } from "../Store/auth/authslice";
 import { Navigate } from "react-router-dom";
 import actgetproductbyid from "../Store/Act/aCtgeproductbyid";
-// import actgetproductbyid from "../store/cart/act/actgetproductbyid";
+import style from "./Styles/Formstyle.module.css"
 
+const{loginformcontainer,registercontainer,inputstyle}=style;
 
 
 
@@ -61,16 +62,21 @@ const Login = () => {
     <Row>
 
       <Col md={{span:6,offset:3}}>
+      <div className={registercontainer}>
+
 
       {searchparams.get("message")==="account_created"&&
       (<Alert variant="success">
         Your account successfully created please login</Alert>)}
       
+  <div className={loginformcontainer}>
+
     <Form onSubmit={handleSubmit(submiteform)}>
-  
+
+      
     <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Label style={{color:"white"}}>Email address</Form.Label>
-      <Form.Control type="text" placeholder="Enter email" {...register("email")} isInvalid={errors.email?.message?true:false}/>
+      <Form.Control className={inputstyle} type="text" placeholder="Enter email" {...register("email")} isInvalid={errors.email?.message?true:false}/>
       <Form.Control.Feedback type="invalid">{errors.email?.message}</Form.Control.Feedback>
 
     
@@ -78,7 +84,7 @@ const Login = () => {
 
     <Form.Group className="mb-3" controlId="formBasicPassword">
       <Form.Label style={{color:"white"}}>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" {...register("password")} isInvalid={errors.password?.message?true:false}/>
+      <Form.Control className={inputstyle} type="password" placeholder="Password" {...register("password")} isInvalid={errors.password?.message?true:false}/>
       <Form.Control.Feedback type="invalid">{errors.password?.message}</Form.Control.Feedback>
 
     </Form.Group>
@@ -86,7 +92,7 @@ const Login = () => {
     
     
     <Button 
-    variant="info"
+    variant="warning"
      type="submit"
 
      disabled={loading==="pending"
@@ -104,7 +110,10 @@ const Login = () => {
 
     {error&&(<p style={{color:"red",marginTop:"10px"}}>{error}</p>)}
   </Form>
+  </div>
       
+      </div>
+
       </Col>
     </Row>
   )

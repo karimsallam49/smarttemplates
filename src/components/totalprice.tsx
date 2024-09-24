@@ -10,7 +10,6 @@ const totalprice = () => {
   const subtotal=productinfo.reduce((accumulator,el)=>{
   
       const price=el.price;
-      const quantity=el.quantitey
   
   
         return accumulator + (price*1) 

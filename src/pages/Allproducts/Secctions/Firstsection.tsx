@@ -1,12 +1,13 @@
 import { useEffect } from "react"
 import { useAppSelector,useAppDispatch } from "../../../Store/hooks"
-import { Container,Row,Col} from "react-bootstrap"
+import { Container,Row,Col, Button} from "react-bootstrap"
 import Carditems from "./Carditems"
 import style from "./sectionstyle.module.css"
 import Loadingpage from "../../LoadingPage/Loadingpage"
 import getSingleproduct from "../../../Store/Act/actGetsingleproduct"
 import { allproductcleanup } from "../../../Store/Singleproduct/Singleproductslice"
 import Loattehandler from "../../../lottie/Lottiehandler"
+import { Link } from "react-router-dom"
 
 const {sectionscontainer}=style
 
@@ -52,6 +53,8 @@ const Firstsection = () => {
           </Row>
         <Row>
             {renderproducts}
+
+            <Link to="product/shehadat"> <Button variant="warning"> المزيد</Button></Link>
 
         </Row>
       </Container>

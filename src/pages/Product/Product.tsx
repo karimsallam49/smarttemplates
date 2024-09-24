@@ -6,6 +6,8 @@ import getproduct from "../../Store/Act/actGetProduct"
 import { useParams } from "react-router-dom"
 import {  dicreaselimit, incraeselimit, productleanup } from "../../Store/Product/ProductSlice"
 import Loadingpage from "../LoadingPage/Loadingpage"
+import style from "./productstyle.module.css"
+const{limitehandler}=style
 
 
 
@@ -82,20 +84,11 @@ const prevhandler=limiterender===1 ? true:false
             ><span style={{color:"white"}}>next</span></Button>
           </div>
 
-          <div className="d-flex align-item-center justify-content-center "
-           style={{width:"50px", 
-           border:"solid", 
-           alignItems:"center",
-           borderColor:"yellow",
-           borderRadius:"10px",
-           justifyContent:"center",
-           display:"flex",
-          marginRight:"10px",
-          fontSize:"18px",
-          backgroundColor:"yellow"
-          }}
+          <div className={limitehandler}
+           
            >
-          <p>{limiterender}</p>
+          <p
+          >{limiterender}</p>
 
           </div>
 <div className="seconbottom">

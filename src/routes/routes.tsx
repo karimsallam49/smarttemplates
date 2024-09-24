@@ -67,7 +67,7 @@ const route=createBrowserRouter([{
     </Suspense>
       },
       {
-        path:"product/:prefix",
+        path:"all-products/product/:prefix",
         element:  <Suspense fallback={<Loattehandler types="loading"/>}>
         <Product/>
     </Suspense>,

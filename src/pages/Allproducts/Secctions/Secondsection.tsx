@@ -3,7 +3,8 @@ import { useAppSelector,useAppDispatch } from "../../../Store/hooks"
 import getSingleproduct from "../../../Store/Act/actGetsingleproduct"
 import { allproductcleanup } from "../../../Store/Singleproduct/Singleproductslice"
 
-import { Container,Row,Col} from "react-bootstrap"
+import { Container,Row,Col,Button} from "react-bootstrap"
+import { Link } from "react-router-dom"
 import Loadingpage from "../../LoadingPage/Loadingpage"
 import Carditems from "./Carditems"
 import style from "./sectionstyle.module.css"
@@ -52,6 +53,9 @@ const Secondsection = () => {
   </Row>
 <Row>
     {renderproducts}
+    <Link to="product/monasbat"> <Button variant="warning"> المزيد</Button></Link>
+
+
 
 </Row>
 </Container>

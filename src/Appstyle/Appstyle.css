@@ -1,7 +1,7 @@
 body{
 
     background-image: url(../assets/background-image.png);
-    padding: 1rem;
+    /* padding: 1rem; */
     overflow-x: hidden;
     height: 100vh;
 

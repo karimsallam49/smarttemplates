@@ -34,21 +34,9 @@ const cartslices=createSlice({
     name:"cartslices",
     initialState,
     reducers:{
-        addtocart:(state,action)=>{
-            const id=action.payload
-            console.log(id)
-            if(state.item[id]){
-                state.item[id]++;
-            }else{
-                state.item[id]=1;
+       
 
-            }
-        },
-
-        changeitemquatity:(state,action)=>{
-
-            state.item[action.payload.id]=action.payload.quantity
-        },
+        
 
     
         removeitemfromcart:(state,action)=>{
@@ -92,7 +80,8 @@ const cartslices=createSlice({
 
 
                     if(state.item[el]){
-                        state.item[el]++
+                        state.item[el]++ 
+
                     }else{
                         state.item[el]=1;
         
@@ -128,7 +117,7 @@ const cartslices=createSlice({
             console.log(action.payload.productid)
             const id=action.payload.productid
             if(state.item[id]){
-                state.item[id]++
+            alert ("انت تملك هذا المنتج بالفعل")
             }else{
                 state.item[id]=1;
 
@@ -152,4 +141,4 @@ const cartslices=createSlice({
 )
 
 export default cartslices.reducer;
-export const {changeitemquatity,removeitemfromcart,cleanproductinfo,addtocart,clrearitems}=cartslices.actions
+export const {removeitemfromcart,cleanproductinfo,clrearitems}=cartslices.actions

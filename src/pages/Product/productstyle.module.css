@@ -1,0 +1,25 @@
+.limitehandler{
+
+    width:80px;
+            height:30px;
+           border:solid ; 
+           display:flex ;
+           justify-content:center ;
+           align-items:center ;
+           border-radius:2px ;
+           border: none;
+          margin-right:10px ;
+          font-size:18px ;
+          background-color:rgb(255, 102, 0) ;
+          color:white ;
+          text-align:center;
+          position: relative;
+          padding: 1rem;
+          p{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            top: 0;
+          }
+}

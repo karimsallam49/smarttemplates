@@ -1,5 +1,5 @@
 import { useAppDispatch,useAppSelector } from "../Store/hooks"
-import { useNavigate,Navigate } from "react-router-dom";
+import { useNavigate,Navigate, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useForm,SubmitHandler } from "react-hook-form"
 import { signupschema,Tsignuptypes } from "../Validations/signupvalidation";
@@ -101,20 +101,14 @@ const {checkingemail,
       error={errors.lastname?.message}
       type="text"
       />
-      {/* <Input
-      label=" رقم الجوال"
-      register={register}
-      name="phonenumber"
-      error={errors.lastname?.message}
-      type="text"
-      /> */}
+      
       <Input
       label="البريد الالكترونى"
       register={register}
       name="email"
       error={errors.email?.message?
-        errors.email?.message:EmailCheckAvability=="notavailable"?"This Email is already taken":""?
-        errors.email?.message:EmailCheckAvability=="failed"?"Network error":""
+        errors.email?.message:EmailCheckAvability==="notavailable"?"This Email is already taken":""?
+        errors.email?.message:EmailCheckAvability==="failed"?"Network error":""
       }
       type="text"
       onBlur={emailonblurhandler}
@@ -138,7 +132,7 @@ const {checkingemail,
      
      
       <Button 
-      variant="info"
+      variant="warning"
        type="submit"
        className="mt-3"
   
@@ -155,6 +149,13 @@ const {checkingemail,
           </>
         ):("submit") }
       </Button>
+
+      <div className="linkarea d-flex " style={{width:"160%", marginTop:"20px" }}>
+
+      <Link to="/login" style={{color:"yellow"}}>سجل دخولك </Link>
+        <p style={{marginLeft:"10px"}}>انت تملك حساب بالفعل؟</p>
+      </div>
+
   
       {error&&(<p style={{color:"DC3545",marginTop:"10px"}}>{error}</p>)}
     </Form>

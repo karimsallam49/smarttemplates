@@ -22,11 +22,11 @@ const Navebare = () => {
           <Nav.Link as={Link} to="/">متجر القوالب الذكيه</Nav.Link>
           <Nav.Link as={Link} to="all-products">جميع المنتجات</Nav.Link>
           <NavDropdown title="الاقسام" id="basic-nav-dropdown">
-            <NavDropdown.Item as={Link} to="product/shehadat">شهادات</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="product/monasbat">
+            <NavDropdown.Item as={Link} to="all-products/product/shehadat">شهادات</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="all-products/product/monasbat">
               المناسبات
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="product/tahnea">التهنئه</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="all-products/product/tahnea">التهنئه</NavDropdown.Item>
   
           </NavDropdown>
           <Nav.Link as={Link} to="/contact-us">تواصل معنا</Nav.Link>
