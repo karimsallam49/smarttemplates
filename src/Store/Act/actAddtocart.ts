@@ -14,7 +14,7 @@ const actaddtocart:any=createAsyncThunk("act/addtocart", async (id:number,thunkA
         }else{
 
             
-        const response= await axios.post("http://localhost:3000/cart/",{userid:userid,productid:id})
+        const response= await axios.post("https://smart-api-six.vercel.app/cart/",{userid:userid,productid:id})
         return response.data
         }
     } catch (error) {

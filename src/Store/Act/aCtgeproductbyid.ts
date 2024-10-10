@@ -13,7 +13,7 @@ type Tdatatype= "productid"|"productfullinfo"
 
         const {authslice}=getState() as RootState
         const userid=authslice.users?.id
-        const getproductid=await axios.get<{productid:number}[]>(`http://localhost:3000/cart?userid=${userid}`)
+        const getproductid=await axios.get<{productid:number}[]>(`https://smart-api-six.vercel.app/cart?userid=${userid}`)
         if(datatype==="productfullinfo"){
             
             if(!getproductid.data.length){
@@ -22,7 +22,7 @@ type Tdatatype= "productid"|"productfullinfo"
        
             }else{
                 const connecteditemsid=getproductid.data.map((el)=>`id=${el.productid}`).join("&")
-                const response=await axios.get<tproduct>(`http://localhost:3000/products?${connecteditemsid}`)
+                const response=await axios.get<tproduct>(`https://smart-api-six.vercel.app/products?${connecteditemsid}`)
 
                 return  {data:response.data,datatype:"productfullinfo"}
             }

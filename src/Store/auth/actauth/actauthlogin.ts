@@ -22,7 +22,7 @@ const actAuthLogin:any=createAsyncThunk("actAuthLogin/act",async(formdata:Tlogin
     const {rejectWithValue}=thunkapi;
 
     try {
-        const respone= await axios.post<Trespone>("http://localhost:3000/login",formdata)
+        const respone= await axios.post<Trespone>("https://smart-api-six.vercel.app/login",formdata)
         console.log(respone)
             return respone.data
         

@@ -15,7 +15,7 @@ const actauth:any= createAsyncThunk("act/ActAuth",async (formdata:Tformdata,thun
     const {rejectWithValue}=thunkapi;
 
     try {
-        const res= await axios.post("http://localhost:3000/register",formdata)
+        const res= await axios.post("https://smart-api-six.vercel.app/register",formdata)
         return res.data
     } catch (error) {
         if(axios.isAxiosError(error)){

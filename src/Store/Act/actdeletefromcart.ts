@@ -11,7 +11,7 @@ const   actdeletdomcart:any=createAsyncThunk("act/deletefromcart", async (id:num
         
 
             
-        const response= await axios.delete(`http://localhost:3000/cart?userid=${userid}&productid=${id}`)
+        const response= await axios.delete(`https://smart-api-six.vercel.app/cart?userid=${userid}&productid=${id}`)
         return response.data
         
     } catch (error) {

@@ -13,7 +13,7 @@ const getproduct:any=createAsyncThunk("getproduct/act",async(prefix,tunkAPI)=>{
     console.log(limitedrender)
 
     try {
-        const response= await axios.get<Tproducts>(`http://localhost:3000/products?cat_prefix=${prefix}`,{params:{
+        const response= await axios.get<Tproducts>(`https://smart-api-six.vercel.app/products?cat_prefix=${prefix}`,{params:{
             _page: limitedrender,
             _limit: 10
         }})
