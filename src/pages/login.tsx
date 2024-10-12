@@ -14,7 +14,7 @@ import { Navigate } from "react-router-dom";
 import actgetproductbyid from "../Store/Act/aCtgeproductbyid";
 import style from "./Styles/Formstyle.module.css"
 
-const{loginformcontainer,registercontainer,inputstyle}=style;
+const{loginformcontainer,inputstyle,container}=style;
 
 
 
@@ -59,11 +59,13 @@ const Login = () => {
   }
 
   return (
-    <Row>
 
-      <Col md={{span:6,offset:3}}>
-      <div className={registercontainer}>
+    <div className={container}>
 
+      <Row className="w-100">
+
+        <Col md={{ span: 6, offset: 3 }}>
+        
 
       {searchparams.get("message")==="account_created"&&
       (<Alert variant="success">
@@ -71,20 +73,22 @@ const Login = () => {
       
   <div className={loginformcontainer}>
 
+    <h4 style={{color:"white", alignSelf:"center"}}>تسجيل الدخول</h4>
+
     <Form onSubmit={handleSubmit(submiteform)}>
 
       
     <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Label style={{color:"white"}}>Email address</Form.Label>
-      <Form.Control className={inputstyle} type="text" placeholder="Enter email" {...register("email")} isInvalid={errors.email?.message?true:false}/>
+      <Form.Label style={{color:"white"}}>البريد الالكترونى</Form.Label>
+      <Form.Control className={inputstyle} type="text"  {...register("email")} isInvalid={errors.email?.message?true:false}/>
       <Form.Control.Feedback type="invalid">{errors.email?.message}</Form.Control.Feedback>
 
     
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="formBasicPassword">
-      <Form.Label style={{color:"white"}}>Password</Form.Label>
-      <Form.Control className={inputstyle} type="password" placeholder="Password" {...register("password")} isInvalid={errors.password?.message?true:false}/>
+      <Form.Label style={{color:"white"}}>الرقم السرى</Form.Label>
+      <Form.Control className={inputstyle} type="password"  {...register("password")} isInvalid={errors.password?.message?true:false}/>
       <Form.Control.Feedback type="invalid">{errors.password?.message}</Form.Control.Feedback>
 
     </Form.Group>
@@ -105,17 +109,25 @@ const Login = () => {
           loading..
         
         </>
-      ):("submit") }
+      ):("تسجيل") }
     </Button>
 
     {error&&(<p style={{color:"red",marginTop:"10px"}}>{error}</p>)}
   </Form>
   </div>
-      
-      </div>
+        </Col>
+      </Row>
 
-      </Col>
-    </Row>
+
+
+      
+
+
+    
+
+    
+
+    </div>
   )
 }
 

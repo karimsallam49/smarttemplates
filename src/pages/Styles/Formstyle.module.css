@@ -1,6 +1,28 @@
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .registercontainer{
 
-    width: 100%;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+
+
+}
+.logincontainer{
+
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -13,7 +35,6 @@
 
 .formcontainer{
 
-    width: 40%;
     background-color: rgb(70, 66, 66);
     text-align: right;
     padding: 1rem;
@@ -23,9 +44,9 @@
 }
 .loginformcontainer{
 
-    width: 80%;
     background-color: rgb(70, 66, 66);
     text-align: right;
+    width: 80%;
     padding: 1rem;
     border-radius: 10px;
 
@@ -36,5 +57,5 @@
     background-color: rgb(255, 187, 0) !important;
     color: gray;
     text-align: right;
-    border: solid 1px gray;
+    border: soxlid 1px gray;
 }

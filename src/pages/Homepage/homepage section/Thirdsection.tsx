@@ -9,7 +9,7 @@ const Thirdsection = () => {
   return (
     <div className={thirdsectioncontainer}>
 
-<Carousel style={{width:"60%"}}>
+<Carousel style={{width:"80%"}}>
       <Carousel.Item>
         <img width={"100%"} height={"500px"} src={fphotot}></img>
        

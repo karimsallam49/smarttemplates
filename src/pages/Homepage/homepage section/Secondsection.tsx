@@ -16,7 +16,7 @@ const Secondsection = () => {
     <Container>
 
         <Row>
-            <Col className="gx-2 gy-2">
+            <Col className="sm-6 mb-3" sm={6} mb={3}>
             <div className={cart}>
                 <div className={overlay}></div>
 
@@ -34,7 +34,7 @@ const Secondsection = () => {
 
             </div>
             </Col>
-            <Col className="gx-2 gy-2">
+            <Col className=" mb-3" sm={6} mb={3}>
             <div className={cart}>
                 <div className={overlay}></div>
 
@@ -52,8 +52,45 @@ const Secondsection = () => {
 
             </div>
             </Col>
+            <Col className=" mb-3" sm={6} mb={3}>
+            <div className={cart}>
+                <div className={overlay}></div>
+
+                <div className={cartimg}>
+                    
+                    <img src={cartphoto} alt="" />
+                     </div>
+
+                <div className={title}>
+                    <p>الشهادات</p>
+                </div>
+                <div className={text}>
+                    <p>الشكر والتقدير-التفوق-النجاح-التخرج-الحضور -التهنئه-التطوع-البرامج التدريبيه-الشهادات التفاعليه بصيغ مفتوحه وغيرها</p>
+                </div>
+
+            </div>
+            </Col>
+            <Col className=" mb-3" sm={6} mb={3}>
+            <div className={cart}>
+                <div className={overlay}></div>
+
+                <div className={cartimg}>
+                    
+                    <img src={cartphoto} alt="" />
+                     </div>
+
+                <div className={title}>
+                    <p>الشهادات</p>
+                </div>
+                <div className={text}>
+                    <p>الشكر والتقدير-التفوق-النجاح-التخرج-الحضور -التهنئه-التطوع-البرامج التدريبيه-الشهادات التفاعليه بصيغ مفتوحه وغيرها</p>
+                </div>
+
+            </div>
+            </Col>
+            
             </Row>
-            <Row>
+            {/* <Row>
 
             <Col className="gx-2 gy-2">
             <div className={cart}>
@@ -91,7 +128,7 @@ const Secondsection = () => {
 
             </div>
             </Col>
-            </Row>
+            </Row> */}
     </Container>
 
        

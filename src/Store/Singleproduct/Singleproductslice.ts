@@ -37,7 +37,9 @@ const Singleproduct= createSlice({
             state.error=null
         })
 
+       
         builder.addCase(getSingleproduct.fulfilled,(state,action)=>{
+
             if (action.payload.datatype==="shehadat"){
                 
                 state.loading="successd",
@@ -53,7 +55,7 @@ const Singleproduct= createSlice({
                 state.loading="successd",
                 state.recordsectionthree=action.payload.data
             }
-            console.log(action.payload.data)
+            console.log(action.payload)
             state.error=null
         })
 

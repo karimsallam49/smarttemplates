@@ -14,15 +14,20 @@ const getSingleproduct:any=createAsyncThunk("getproduct/act",async(datatype:Tdat
 
         if(datatype==="shehadat"){
 
-            const response= await axios.get<Tproducts>(`http://localhost:3000/products?cat_prefix=shehadat`,{params:{
+            const response= await axios.get<Tproducts>(`
+               https://smart-api-six.vercel.app/products?cat_prefix=shehadat`,{params:{
                 _page: 1,
                 _limit: 6
-            }})
-            return {data:response.data, datatype:"shehadat"}
+            }}
+        
+        )
+        
+        return {data:response.data, datatype:"shehadat"}
         }
         if(datatype==="monasbat"){
 
-            const response= await axios.get<Tproducts>(`http://localhost:3000/products?cat_prefix=monasbat`,{params:{
+            const response= await axios.get<Tproducts>(`
+                https://smart-api-six.vercel.app/products?cat_prefix=monasbat`,{params:{
                 _page: 1,
                 _limit: 6
             }})
@@ -30,10 +35,12 @@ const getSingleproduct:any=createAsyncThunk("getproduct/act",async(datatype:Tdat
         }
         if(datatype==="tahnea"){
 
-            const response= await axios.get<Tproducts>(`http://localhost:3000/products?cat_prefix=tahnea`,{params:{
+            const response= await axios.get<Tproducts>(`
+                https://smart-api-six.vercel.app/products?cat_prefix=tahnea`,{params:{
                 _page: 1,
                 _limit: 6
             }})
+           
             return {data:response.data, datatype:"tahnea"}
         }
       

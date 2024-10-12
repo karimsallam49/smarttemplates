@@ -15,7 +15,7 @@ const usecheckedavabilityemail=()=>{
         setEmailCheckAvability("checking")
 
         try {
-            const response= await axios.get(`http://localhost:3000/users?email=${email}`)
+            const response= await axios.get(`https://smart-api-six.vercel.app/users?email=${email}`)
             console.log(response.data +"hee")
             console.log(email)
             if(!response.data.length){

@@ -83,7 +83,7 @@ const {checkingemail,
       <Container>
      <Row>
   
-        <Col md={{span:6,offset:3}}>
+        <Col>
         
         
       <Form onSubmit={handleSubmit(submitform)}>
@@ -93,6 +93,8 @@ const {checkingemail,
       name="firstname"
       error={errors.firstname?.message}
       type="text"
+      
+      
       />
       <Input
       label="الاسم الاخير"
@@ -107,8 +109,9 @@ const {checkingemail,
       register={register}
       name="email"
       error={errors.email?.message?
-        errors.email?.message:EmailCheckAvability==="notavailable"?"This Email is already taken":""?
-        errors.email?.message:EmailCheckAvability==="failed"?"Network error":""
+        errors.email?.message:EmailCheckAvability==="notavailable"?
+        "This Email is already taken":
+        EmailCheckAvability==="failed"?"Network error":""
       }
       type="text"
       onBlur={emailonblurhandler}
@@ -150,10 +153,10 @@ const {checkingemail,
         ):("submit") }
       </Button>
 
-      <div className="linkarea d-flex " style={{width:"160%", marginTop:"20px" }}>
+      <div className="linkarea d-flex " style={{width:"", marginTop:"20px" }}>
 
       <Link to="/login" style={{color:"yellow"}}>سجل دخولك </Link>
-        <p style={{marginLeft:"10px"}}>انت تملك حساب بالفعل؟</p>
+         <p style={{color:"white"}}>انت تملك حساب بالفعل؟</p>
       </div>
 
   
