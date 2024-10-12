@@ -28,7 +28,7 @@ const Thirdsection = () => {
 
     const renderproducts= 
     recordsectionthree.length > 0 ? (recordsectionthree.map((el)=>(
-        <Col xs={6} md={3}
+        <Col xs={8} md={3}
         key={el.id}
         className="d-flex justfiy-content-center- mb-5 mt-2"
         >
