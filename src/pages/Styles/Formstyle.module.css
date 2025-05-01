@@ -59,3 +59,11 @@
     text-align: right;
     border: soxlid 1px gray;
 }
+
+@media (max-width:900px) {
+    
+    .loginformcontainer{
+
+        width: 100%;
+    }
+}
